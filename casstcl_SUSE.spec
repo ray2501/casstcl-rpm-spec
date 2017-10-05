@@ -22,6 +22,17 @@ BuildRoot:     %{buildroot}
 CassTcl provides a Tcl interface to the Cassandra database using the
 cpp-driver C/C++ API.
 
+%package devel
+Summary:        Development package for CassTcl
+Group:          Development/Libraries/Tcl
+Requires:       %{name} = %version
+
+%description devel
+CassTcl provides a Tcl interface to the Cassandra database using the
+cpp-driver C/C++ API.
+
+This package contains development files for CassTcl.
+
 %prep
 %setup -q -n %{name}-%{version}
 
@@ -44,4 +55,8 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %{directory}/%{_lib}/tcl
-%{directory}/include
+
+%files devel
+%defattr(-,root,root)
+%{directory}/include/*.h
+
