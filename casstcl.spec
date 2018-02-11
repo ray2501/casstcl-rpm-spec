@@ -4,16 +4,15 @@
 
 Name:          casstcl
 Summary:       Tcl language interface to the Cassandra database
-Version:       2.12
-Release:       2
+Version:       2.11
+Release:       0
 License:       BSD-3 License
 Group:         Development/Libraries/Tcl
-Source:        https://github.com/flightaware/casstcl/casstcl-2.12.tar.gz
+Source:        https://github.com/flightaware/casstcl/casstcl-2.11.tar.gz
 URL:           https://github.com/flightaware/casstcl
 BuildRequires: autoconf
 BuildRequires: make
 BuildRequires: tcl-devel >= 8.5
-BuildRequires: cassandra-cpp-driver
 BuildRequires: cassandra-cpp-driver-devel
 Requires:      tcl >= 8.5
 BuildRoot:     %{buildroot}
