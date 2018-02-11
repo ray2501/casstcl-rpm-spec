@@ -15,6 +15,7 @@ BuildRequires: make
 BuildRequires: tcl-devel >= 8.5
 BuildRequires: cassandra-cpp-driver-devel
 Requires:      tcl >= 8.5
+Requires:      libcassandra2
 BuildRoot:     %{buildroot}
 
 %description
