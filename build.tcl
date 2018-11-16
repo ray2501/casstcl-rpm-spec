@@ -1,25 +1,12 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "casstcl-2.12_git20170310"
+set base "casstcl-2.13.0"
 
-set var2 [list git clone https://github.com/flightaware/casstcl.git $base]
-exec >@stdout 2>@stderr {*}$var2
+set fileurl "https://github.com/flightaware/casstcl/archive/v2.13.0.tar.gz"
 
-cd casstcl-2.12_git20170310
-
-set var2 [list git checkout 8000abfa8a6d6ad44f7d717991d608679b57bac9]
-exec >@stdout 2>@stderr {*}$var2
-
-set var2 [list git reset --hard]
-exec >@stdout 2>@stderr {*}$var2
-
-file delete -force .git
-
-cd ..
-
-set var2 [list tar czvf ${base}.tar.gz $base]
-exec >@stdout 2>@stderr {*}$var2
+set var [list wget $fileurl -O $base.tar.gz]
+exec >@stdout 2>@stderr {*}$var
 
 if {[file exists build]} {
     file delete -force build
@@ -32,6 +19,5 @@ set buildit [list rpmbuild --target $arch --define "_topdir [pwd]/build" -bb cas
 exec >@stdout 2>@stderr {*}$buildit
 
 # Remove our source code
-file delete -force $base
 file delete -force $base.tar.gz
 
