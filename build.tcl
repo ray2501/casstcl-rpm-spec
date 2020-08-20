@@ -1,9 +1,9 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "casstcl-2.13.2"
+set base "casstcl-2.14.0"
 
-set fileurl "https://github.com/flightaware/casstcl/archive/v2.13.2.tar.gz"
+set fileurl "https://github.com/flightaware/casstcl/archive/v2.14.0.tar.gz"
 
 set var [list wget $fileurl -O $base.tar.gz]
 exec >@stdout 2>@stderr {*}$var
