@@ -4,7 +4,7 @@
 
 Name:          casstcl
 Summary:       Tcl language interface to the Cassandra database
-Version:       2.14.0
+Version:       2.15.0
 Release:       0
 License:       BSD-3 License
 Group:         Development/Libraries/Tcl
