@@ -6,7 +6,7 @@ Name:          casstcl
 Summary:       Tcl language interface to the Cassandra database
 Version:       2.16.0
 Release:       0
-License:       BSD-3 License
+License:       BSD-3-Clause
 Group:         Development/Libraries/Tcl
 Source:        casstcl-%{version}.tar.gz
 URL:           https://github.com/flightaware/casstcl
